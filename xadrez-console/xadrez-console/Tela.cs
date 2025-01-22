@@ -8,11 +8,11 @@ namespace xadrez_console
         {
             for (int l = 0; l < Tabuleiro.Linhas; l++) {
                for (int c = 0; c < Tabuleiro.Colunas; c++){
-                    if (Tabuleiro.Peca(l,c) == null){
+                    if (Tabuleiro.LocalPeca(l,c) == null){
                         Console.Write("-" + " ");
                     }
                     else {
-                        Console.Write(Tabuleiro.Peca(l, c) + " ");
+                        Console.Write(Tabuleiro.LocalPeca(l, c) + " ");
                     }
                }
                 Console.WriteLine();
