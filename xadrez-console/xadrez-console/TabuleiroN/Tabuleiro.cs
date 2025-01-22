@@ -18,5 +18,10 @@ namespace xadrez_console.TabuleiroN
         public Peca Peca(int linha, int coluna){
             return Pecas[linha, coluna];
         }
+
+        public void colocarPeca (Peca peca, Posicao posicao){
+            Pecas[posicao.Linha, posicao.Coluna] = peca;
+            peca.Posicao = posicao;
+        }
     }
 }
