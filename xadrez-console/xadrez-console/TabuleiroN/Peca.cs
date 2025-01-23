@@ -16,5 +16,10 @@ namespace xadrez_console.TabuleiroN
             QntdMovimentos = 0;
             Tabuleiro = tabuleiro;  
         }
+
+        public void incrementarQntdMovimentos()
+        {
+            QntdMovimentos ++;
+        }
     }
 }
