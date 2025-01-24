@@ -57,7 +57,7 @@ namespace xadrez_console.TabuleiroN
         }
 
         public void validarPosicao(Posicao pos)
-        { // Verifica a exceção
+        { // Verifica a exceção 
             if (!posicaoValida(pos))
             {
                 throw new TabuleiroException("Posição inválida");
