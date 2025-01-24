@@ -37,12 +37,12 @@ namespace xadrez_console.TabuleiroN
             }
             Peca pecaRetirar = LocalPeca(posicao);
             pecaRetirar.Posicao = null;
-            Pecas[posicao.Linha,posicao.Coluna] = null;
+            Pecas[posicao.Linha,posicao.Coluna] = null; 
             return pecaRetirar; 
         }
 
         public bool existePeca(Posicao pos){
-            posicaoValida(pos);     
+            validarPosicao(pos);     
             if (LocalPeca(pos) != null) {
                 return true;
             }
@@ -51,17 +51,17 @@ namespace xadrez_console.TabuleiroN
 
         public bool posicaoValida(Posicao pos){ // Validar se a posição existe
             if (pos.Linha < 0 || pos.Coluna < 0 || pos.Linha >= Linhas || pos.Coluna >= Colunas) {
-                throw new TabuleiroException("Posição inválida");
+                return false;
             }
             return true;
         }
 
-        //public void validarPosicao(Posicao pos)
-        //{ // Verifica a exceção
-        //    if (!posicaoValida(pos))
-        //    {
-        //        throw new TabuleiroException("Posição inválida");
-        //    }
-        //}
+        public void validarPosicao(Posicao pos)
+        { // Verifica a exceção
+            if (!posicaoValida(pos))
+            {
+                throw new TabuleiroException("Posição inválida");
+            }
+        }
     }
 }
